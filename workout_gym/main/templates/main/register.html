@@ -3,5 +3,10 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-    <h2>Registration</h2>
+    <h2 style="color: gold">Registration</h2>
+    <form method="post" style="color: gold">
+    {% csrf_token %}
+    {{ form.as_p }}
+     <button type="submit" class="btn btn-warning">Registration</button>
+    </form>
 {% endblock %}
