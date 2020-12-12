@@ -47,3 +47,7 @@ def index(request):
 def workouts(request):
     return render(request, 'main/workouts.html')
 
+
+def gallery(request):
+    return render(request, 'main/gallery.html')
+

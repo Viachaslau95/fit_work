@@ -1,0 +1,23 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+
+     <div class="features">
+    <h2>Gallery</h2>
+         <p>Arnold Schwarzenegger</p>
+         <p>Mister Olympia(1970-1975,1980)</p>
+        <img width="500px"  src="{% static 'main/img/957b7b16b1b1a0e3ce3617a2575cb90c-quality_70Xresize_1Xallow_enlarge_0Xw_700Xh_0.jpg' %} ">
+         <p>Lee Haney</p>
+         <p>Mister Olympia(1984-1991)</p>
+         <img width="500px"  src="{% static 'main/img/1496224407_maxresdefault.jpg'%} ">
+         <p>Ronnie Coleman</p>
+         <p>Mister Olympia(1998-2005)</p>
+         <img width="500px"  src="{% static 'main/img/coleman_258.jpg'%} ">
+         <p>Phil Heath</p>
+         <p>Mister Olympia(2011-2017)</p>
+        <img width="500px"  src="{% static 'main/img/phil-heath-11090.jpg'%} ">
+
+    </div>
+{% endblock %}
