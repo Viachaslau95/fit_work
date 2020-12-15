@@ -1,0 +1,22 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Workouts page{% endblock %}
+
+{% block content %}
+    <a href="{% url 'w_o_create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Add workouts</button></li></a>
+    <div class="features">
+    <h2>Workouts</h2>
+    {% if workouts %}
+    {% for el in workouts %}
+        <div class="alert alert-warning">
+            <h3> {{ el.type_of_training }}</h3>
+            <p>{{ el.anons }}</p>
+            <a href="{% url 'workouts-detail' el.id %}" class="btn btn-warning">Read</a>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>Not workouts</p>
+    {% endif %}
+
+    </div>
+{% endblock %}

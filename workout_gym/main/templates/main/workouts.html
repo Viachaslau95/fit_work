@@ -1,11 +1,25 @@
 {% extends 'main/layout.html'%}
-
+{% load static %}
 {% block title %}WORKOUTS{% endblock %}
 
 {% block content %}
+        <h1 style="color: gold;">Audio</h1>
+        <audio  controls="" >
+            <source  src="{% static 'main/audio/AC-DC - T.N.T..mp3' %}" />
+        </audio>
+        <br>
+        <audio controls="controls">
+            <source  src="{% static 'main/audio/AC-DC - Back In Black.mp3' %}" />
+        </audio>
+        <br>
+        <audio controls="controls">
+            <source  src="{% static 'main/audio/Queen - The Show Must Go On.mp3' %}" />
+        </audio>
+
      <div class="features">
-    <h2>Workouts</h2>
-    <p>Самый страшный враг – это наши сомнения. Страх. Из-за этого мы теряем то, что могли бы получить, но даже не попробовали.</p>
-    <button class="btn btn-danger">test</button>
+     <h2>{{ workout.type_of_training }}</h2>
+        <p>{{ workout.date }}</p>
+        <p>{{ workout.full_text }}</p>
+         <button class="btn btn-danger">test</button>
     </div>
 {% endblock %}

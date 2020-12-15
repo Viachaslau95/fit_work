@@ -3,6 +3,7 @@
 {% block title %}News page{% endblock %}
 
 {% block content %}
+    <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Add news</button></li></a>
     <div class="features">
     <h2>News on the site</h2>
     {% if news %}

@@ -44,10 +44,6 @@ def index(request):
     return render(request, 'main/index.html', data)
 
 
-def workouts(request):
-    return render(request, 'main/workouts.html')
-
-
 def gallery(request):
     return render(request, 'main/gallery.html')
 

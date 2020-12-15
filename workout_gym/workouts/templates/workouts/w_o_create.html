@@ -1,0 +1,18 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Workout addition form{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>Workout addition form</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.type_of_training}}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-info" type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}
