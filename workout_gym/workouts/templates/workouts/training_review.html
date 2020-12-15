@@ -1,0 +1,13 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Workouts page{% endblock %}
+
+{% block content %}
+    <div class="features">
+    <h2>{{ workouts.type_of_training }}</h2>
+        <p>{{ workouts.date }}</p>
+        <p>{{ workouts.full_text }}</p>
+        <a href="{% url 'workouts-delete' workouts.id %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'workouts-update' workouts.id %}" class="btn btn-info">Update</a>
+    </div>
+{% endblock %}
