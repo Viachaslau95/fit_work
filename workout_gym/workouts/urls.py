@@ -7,5 +7,4 @@ urlpatterns = [
    path('<int:pk>', views.WorkoutsDetailView.as_view(), name='workouts-detail'),
    path('<int:pk>/update', views.NewsUpdateView.as_view(), name='workouts-update'),
    path('<int:pk>/delete', views.WorkoutsDeleteView.as_view(), name='workouts-delete'),
-
 ]

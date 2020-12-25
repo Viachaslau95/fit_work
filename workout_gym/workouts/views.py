@@ -5,7 +5,7 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def workouts_home(request):
-    workouts = Workouts.objects.order_by('-date')
+    workouts = Workouts.objects.order_by('-pub_date')
     return render(request, 'workouts/workouts_home.html', {'workouts': workouts})
 
 

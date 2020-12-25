@@ -1,15 +1,17 @@
 body{
-    background: #616161;
+    background: url("../img/20.grandcanyon-42-45938276-crop-1680x1050.jpg") fixed;
 }
 
-aside {
+
+aside  {
     float: left;
     background: #050505;
     width: 20%;
     padding: 2.5%;
-    height: 100vh;
+    height: 150vh;
     color: gold;
-    border-right: 2px solid gold ;
+    border-right: 2px solid gold;
+
 }
 aside img{
     width: 200px;
@@ -43,7 +45,7 @@ main .features{
     width:75% ;
 }
 main .features p {
-    max-width: 400px;
+    max-width: 650px;
     margin: 20px auto;
     color: white;
 }
@@ -52,6 +54,7 @@ main .features p {
 .alert-warning{
     float: left;
     clear: both;
+    height: 200px;
     width: 400px;
     margin: 20px 34%;
     text-align: left;

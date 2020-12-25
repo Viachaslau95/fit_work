@@ -4,9 +4,9 @@
 
 {% block content %}
     <div class="features">
-    <h2>{{ workouts.type_of_training }}</h2>
+        <h2>{{ workouts.type_of_training }}</h2>
         <p>{{ workouts.date }}</p>
-        <p>{{ workouts.full_text }}</p>
+        <b><pre><p style="background-color: black">{{ workouts.text }}</p></pre></b>
         <a href="{% url 'workouts-delete' workouts.id %}" class="btn btn-danger">Delete</a>
         <a href="{% url 'workouts-update' workouts.id %}" class="btn btn-info">Update</a>
     </div>

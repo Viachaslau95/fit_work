@@ -1,11 +1,13 @@
+from django.contrib.auth.models import User
 from django.db import models
+from datetime import datetime
 
 
 class Workouts(models.Model):
-    type_of_training = models.CharField('Type of training', max_length=50)
-    anons = models.CharField('Anons', max_length=250)
-    full_text = models.TextField('Article')
-    date = models.DateTimeField('Publication date')
+    type_of_training = models.CharField(max_length=50)
+    anons = models.CharField(max_length=250)
+    text = models.TextField()
+    pub_date = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
         return f'Workouts:{self.type_of_training}'

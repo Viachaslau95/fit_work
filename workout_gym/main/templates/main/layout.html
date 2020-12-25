@@ -25,12 +25,12 @@
 
         {% endif %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css " href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
     <aside>
-        <span class="navbar-text">
+        <span class="navbar-text" >
             {% if request.user.is_authenticated %}
                 Welcome, {{ user.username }} | <a href="{% url 'logout' %}" style="color: red">Logout</a>
             {% else %}
@@ -47,7 +47,6 @@
             <a href="{% url 'workouts_home'%}"><li> <i class="fas fa-dumbbell"></i>Workouts</li></a>
             <a href="{% url 'news_home' %}"><li> <i class="far fa-newspaper"></i>News</li></a>
             <a href="{% url 'gallery' %}"><li> <i class="fas fa-images"></i>Gallery</li></a>
-            <a href=""><li> <i class="fas fa-id-card-alt"></i>Contacts</li></a>
         </ul>
     </aside>
     <main>

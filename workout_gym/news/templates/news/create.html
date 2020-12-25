@@ -9,8 +9,8 @@
             {% csrf_token %}
             {{ form.title }}<br>
             {{ form.anons }}<br>
-            {{ form.full_text }}<br>
-            {{ form.date }}<br>
+            {{ form.text }}<br>
+            {{ form.pub_date }}<br>
             <span>{{ error }}</span>
             <button class="btn btn-info" type="submit">Add article</button>
         </form>

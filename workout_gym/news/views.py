@@ -5,7 +5,7 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def news_home(request):
-    news = Articles.objects.order_by('-date')
+    news = Articles.objects.order_by('-pub_date')
     return render(request, 'news/news_home.html', {'news': news})
 
 
@@ -40,6 +40,6 @@ def create(request):
     form = ArticlesForm()
     data = {
         'form': form,
-        'error':error
+        'error': error
     }
     return render(request, 'news/create.html', data)

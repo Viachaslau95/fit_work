@@ -5,8 +5,8 @@
 {% block content %}
     <div class="features">
     <h2>{{ article.title }}</h2>
-        <p>{{ article.date }}</p>
-        <p>{{ article.full_text }}</p>
+        <p>{{ article.pub_date }}</p>
+        <b><p style="background: black">{{ article.text }}</p></b>
         <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Delete</a>
         <a href="{% url 'news-update' article.id %}" class="btn btn-info">Update</a>
     </div>

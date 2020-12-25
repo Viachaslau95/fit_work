@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
 class WorkoutsForm(ModelForm):
     class Meta:
         model = Workouts
-        fields = ['type_of_training', 'anons', 'full_text', 'date']
+        fields = ['type_of_training', 'anons', 'text', 'pub_date']
 
         widgets = {
             'type_of_training': TextInput(attrs={
@@ -16,11 +16,11 @@ class WorkoutsForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Article announcement'
             }),
-            'date': DateTimeInput(attrs={
+            'pub_date': DateTimeInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'publication date'
             }),
-            'full_text': Textarea(attrs={
+            'text': Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Text news'
             }),
