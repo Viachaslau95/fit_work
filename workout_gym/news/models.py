@@ -7,7 +7,9 @@ class Articles(models.Model):
     title = models.CharField(max_length=250)
     anons = models.CharField(max_length=250)
     text = models.TextField()
+    photo = models.ImageField(upload_to='photos/%Y/%m/')
     pub_date = models.DateTimeField(default=datetime.now)
+
 
     def __str__(self):
         return f'News:{self.title}'

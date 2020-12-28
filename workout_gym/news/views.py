@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
 from .models import Articles
 from .forms import ArticlesForm
 from django.views.generic import DetailView, UpdateView, DeleteView
@@ -6,7 +7,14 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 
 def news_home(request):
     news = Articles.objects.order_by('-pub_date')
-    return render(request, 'news/news_home.html', {'news': news})
+    news_paginator = Paginator(news, 3)
+    page_num = request.GET.get('page')
+    page = news_paginator.get_page(page_num)
+    contex = {
+        'count': news_paginator.count,
+        'page': page
+    }
+    return render(request, 'news/news_home.html', contex)
 
 
 class NewsDetailView(DetailView):
